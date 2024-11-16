@@ -73,6 +73,9 @@ st.markdown(
         .result .prediction-box:hover {
             background-color: #357ae8;
         }
+        div[data-baseweb="input"] > div {
+        margin-top: 0;  /* Removes any extra spacing from the top */
+    }
     </style>
     <div class="title">
         <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span><span> </span><span>2</span><span>E</span>
@@ -81,9 +84,12 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# Add additional styling or instructions
+st.info("Enter a query with <mask> to get the top predictions based on your model.")
+
 # Input from the user
 query = st.text_input(
-    "Enter your query (include <mask>):",
+    label="Search",
     placeholder="e.g., 20 newtons equals how many <mask>?"
 )
 
@@ -118,5 +124,4 @@ if st.button("Predict"):
         
         st.markdown("</div>", unsafe_allow_html=True)
 
-# Add additional styling or instructions
-st.info("Enter a query with `<mask>` to get the top predictions based on your model.")
+
