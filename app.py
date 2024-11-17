@@ -85,7 +85,7 @@ st.markdown(
 )
 
 # Add additional styling or instructions
-st.info("Enter a query with <mask> to get the top predictions based on your model.")
+st.info("Enter a query with <mask> to get it's the top predictions based on our masked language model.")
 
 # Input from the user
 query = st.text_input(
