@@ -39,8 +39,6 @@ cd google-2e-masking-prediction
 pip install -r requirements.txt
 ```
 
-> **Note**: If you don’t have `requirements.txt`, install the dependencies manually:
-
 ```bash
 pip install streamlit transformers
 ```
@@ -51,7 +49,7 @@ Make sure you have the fine-tuned model directory `mlm_model_save` in the projec
 
 For example, the following line in the code:
 ```python
-save_dir = "/Users/harsita/Desktop/btt/btt-google-2e/mlm_model_save"
+save_dir = "/Users/harsita/Desktop/btt/btt-google-2e/demo-app/mlm_model_save"
 ```
 
 Should be updated to reflect the correct path where `mlm_model_save` is located on your machine.
