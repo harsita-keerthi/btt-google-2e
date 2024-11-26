@@ -38,7 +38,9 @@ save_dir = "/Users/harsita/Desktop/btt/btt-google-2e/demo-app/mlm_model_save"
 Should be updated to reflect the correct path where mlm_model_save is located on your machine. Do this for both models.
 
 ### Run the Application
-`streamlit run app.py`
+```bash
+streamlit run app.py
+```
 
 Once the app is running, navigate to http://localhost:8501 in your browser to start using the tool.
 
