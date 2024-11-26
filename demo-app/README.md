@@ -47,10 +47,10 @@ Once the app is running, navigate to http://localhost:8501 in your browser to st
 ### How It Works
 1. Tab Switch: Choose which model you would like to get top queries from.
 
-2. Enter Your Query: Example, picked MaskedLM model. The user inputs a sentence with a <mask> to indicate the missing word, such as:
-20 newtons equals how many <mask>?
+2. Enter Your Query: Example, picked MaskedLM model. The user inputs a sentence with a `<mask>` to indicate the missing word, such as:
+20 newtons equals how many `<mask>`?
 
-3. Submit Prediction: Upon clicking the "Predict" button, the app processes the query and generates the top 5 predictions for the <mask>.
+3. Submit Prediction: Upon clicking the "Predict" button, the app processes the query and generates the top 5 predictions for the `<mask>`.
 
 4. View and Click Predictions: The predictions are displayed in individual styled boxes. Each prediction is clickable and will open a new tab with a Google search for the selected prediction.
 
@@ -69,7 +69,7 @@ Once upon a time
 
 ### Example Usage
 1. Masked Language Model Predictions:
-- Input: 20 newtons equals how many <mask>?
+- Input: 20 newtons equals how many `<mask>`?
 - Output: Top 5 predictions with clickable links.
 
 2. GPT Model Text Generation:
@@ -77,5 +77,5 @@ Once upon a time
 - Output: Top 5 generated texts with clickable links.
 
 ### Notes
-- Ensure that the <mask> token is included in the query for masked language model predictions.
+- Ensure that the `<mask>` token is included in the query for masked language model predictions.
 - The generated texts are controlled by various parameters such as `top_k`, `top_p`, `temperature`, and `repetition_penalty` to ensure diversity and relevance.
