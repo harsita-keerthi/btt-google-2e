@@ -4,8 +4,8 @@ import tensorflow as tf
 import urllib.parse
 
 # load models
-mlm_model_path = "./maskedLM"
-gpt_model_path = "./fine_tuned_model"
+mlm_model_path = "./mlm_model_save"
+gpt_model_path = "./gpt_model_save2"
 
 mask_filler = pipeline('fill-mask', model=mlm_model_path, tokenizer=mlm_model_path, framework='tf')
 gpt_model = TFGPT2LMHeadModel.from_pretrained(gpt_model_path)
