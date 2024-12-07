@@ -70,4 +70,5 @@ Our Team:
 - Sofia Nguyen
 - Vanessa Huynh
 - Erica Xue
+
 Special thanks to challenge advisors Kanay Gupta and Smrithika Appaiah, and course support Mako Ohara.
