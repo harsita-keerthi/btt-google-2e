@@ -1,81 +1,86 @@
-# Demo App - Google 2E
-## Search Query Recommendation System
+# [Demo App - Google 2E](https://drive.google.com/file/d/19itx49YZDUKfZklzAj0m22UMsGmbyxR2/view?usp=sharing)  
+## Search Query Recommendation System  
 
-### Overview
-This application provides two main functionalities:
-1. **Masked Language Model Predictions**: Enter a query with `<mask>` to get top predictions based on our masked language model.
-2. **GPT Model Text Generation**: Enter a prompt to get predictions from our GPT model.
+### Overview  
+This application provides an interactive platform for generating search query recommendations using advanced language models. Users can leverage three functionalities:  
 
-### Features
+1. **Masked Language Model Predictions**: Predict the most likely completions for queries with masked tokens.  
+2. **GPT Model Text Generation**: Generate contextual sequences from prompts using a GPT model.  
+3. **Combined Model Predictions**: Generate enhanced outputs by combining predictions from both Masked Language and GPT models.  
 
-#### Masked Language Model Predictions
-- **Input**: User can enter a query containing the `<mask>` token.
-- **Output**: The application returns the top 5 predictions for the masked token.
-- **Usage**:
-  - Enter a query in the format `e.g., 20 newtons equals how many <mask>?`.
-  - Click the "Predict" button.
-  - If the query does not contain `<mask>`, an error message is displayed.
-  - The top 5 predictions are displayed as clickable links that open a Google search for the predicted text.
+### Features  
 
-#### GPT Model Text Generation
-- **Input**: User can enter a prompt.
-- **Output**: The application generates and returns the top 5 sequences based on the prompt.
-- **Usage**:
-  - Enter a prompt in the format `e.g., Interesting facts about Egypt`.
-  - Click the "Generate" button.
-  - If the prompt is empty, an error message is displayed.
-  - The top 5 generated texts are displayed as clickable links that open a Google search for the generated text.
+#### **Masked Language Model Predictions**  
+- **Input**: Enter a query containing the `<mask>` token.  
+- **Output**: The top 5 predictions for the masked token.  
+- **Usage**:  
+  - Input a query in the format: `e.g., 20 newtons equals how many <mask>?`.  
+  - Click the **"Predict"** button.  
+  - If the query does not contain `<mask>`, an error message is displayed.  
+  - Predictions are shown as clickable links that open Google search results for each prediction.  
 
-### Model Directory Setup
+#### **GPT Model Text Generation**  
+- **Input**: Enter a text prompt.  
+- **Output**: The top 5 generated sequences based on the prompt.  
+- **Usage**:  
+  - Input a prompt in the format: `e.g., Interesting facts about Egypt`.  
+  - Click the **"Generate"** button.  
+  - If the input is empty, an error message is displayed.  
+  - Generated sequences are displayed as clickable links leading to Google search results.  
 
-Make sure you have the fine-tuned model directories `mlm_model_save` and `gpt_model_save2` in the project directory. If the models are located elsewhere, update the file path in the code accordingly.
+#### **Combined Model Predictions**  
+- **Input**: Enter a text query containing `<mask>` or a generic prompt.  
+- **Output**: Combined predictions from MaskedLM and GPT for a richer output.  
+- **Usage**:  
+  - Input a query in the desired format.  
+  - Click the **"Generate Combined"** button.  
+  - Predictions are displayed as clickable links leading to Google search results.  
 
-For example, the following line in the code:
+### Directory Structure  
+
+Ensure the fine-tuned model directories, `mlm_model_save` and `gpt_model_save2`, are present in the project directory. Update the paths in the code if they are located elsewhere.  
+
+Example:
 ```python
-save_dir = "/Users/harsita/Desktop/btt/btt-google-2e/demo-app/mlm_model_save"
-```
+save_dir = "/path/to/your/project/mlm_model_save"
+```  
 
-Should be updated to reflect the correct path where mlm_model_save is located on your machine. Do this for both models.
+Update this for both model directories.  
 
-### Run the Application
-```bash
-streamlit run app.py
-```
+### How to Run  
 
-Once the app is running, navigate to http://localhost:8501 in your browser to start using the tool.
+1. Launch the app with:  
+   ```bash
+   streamlit run app.py
+   ```  
 
-### How It Works
-1. Tab Switch: Choose which model you would like to get top queries from.
+2. Open the application in your browser at [http://localhost:8501](http://localhost:8501).  
 
-2. Enter Your Query: Example, picked MaskedLM model. The user inputs a sentence with a `<mask>` to indicate the missing word, such as:
-20 newtons equals how many `<mask>`?
+### How It Works  
 
-3. Submit Prediction: Upon clicking the "Predict" button, the app processes the query and generates the top 5 predictions for the `<mask>`.
+#### **Step 1: Select a Model**  
+Choose one of the tabs to use the desired functionality: **MaskedLM**, **GPT**, or **Combined**.  
 
-4. View and Click Predictions: The predictions are displayed in individual styled boxes. Each prediction is clickable and will open a new tab with a Google search for the selected prediction.
+#### **Step 2: Enter Your Input**  
+- For MaskedLM, include `<mask>` in the query.  
+- For GPT or Combined, enter a text prompt.  
 
-5. Enter Your Prompt: Example, picked GPT model. The user inputs a prompt, such as:
-Once upon a time
+#### **Step 3: Submit Your Query**  
+- Click the **"Predict"**, **"Generate"**, or **"Generate Combined"** button.  
 
-6. Submit Generation: Upon clicking the "Generate" button, the app processes the prompt and generates the top 5 sequences.
+#### **Step 4: View Results**  
+- Top 5 results are displayed as clickable styled boxes.  
+- Clicking a result opens a Google search for that text in a new tab.  
 
-7. View and Click Generated Texts: The generated texts are displayed in individual styled boxes. Each generated text is clickable and will open a new tab with a Google search for the selected text.
+### Dependencies  
 
-### Dependencies
-- `streamlit`
-- `transformers`
-- `tensorflow`
-- `urllib`
+- `streamlit`  
+- `transformers`  
+- `tensorflow`  
+- `urllib`  
 
-### Example Usage
-1. Masked Language Model Predictions:
-- Input: 20 newtons equals how many `<mask>`?
-- Output: Top 5 predictions with clickable links.
+### Notes  
 
-2. GPT Model Text Generation:
-- Input: Once upon a time
-- Output: Top 5 generated texts with clickable links.
-
-### Notes
-- Ensure that the `<mask>` token is included in the query for masked language model predictions.
-- The generated texts are controlled by various parameters such as `top_k`, `top_p`, `temperature`, and `repetition_penalty` to ensure diversity and relevance.
+1. Ensure `<mask>` is included for MaskedLM predictions.  
+2. Generated outputs are fine-tuned with hyperparameters such as `top_k`, `top_p`, `temperature`, and `repetition_penalty` for improved diversity and relevance.  
+3. Model paths must be correctly configured for the application to run smoothly.   
