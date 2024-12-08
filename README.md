@@ -1,13 +1,13 @@
 # [Break Through Tech: Google 2E](https://docs.google.com/presentation/d/120Zn7rPPT29uXdwBKD9wdJlObjj7Nk3GWQwikFf93TM/edit?usp=sharing)
 
 ## Search Query Recommendation System
-This project focuses on developing an intelligent query autocompletion system using advanced natural language processing techniques. The system combines GPT-2 and Masked Language Models to generate accurate and contextually relevant query suggestions.
+This project focuses on developing an intelligent query autocompletion system using advanced natural language processing techniques. The system combines GPT-2 and Masked Language models to generate accurate and contextually relevant query suggestions.
 
 <img width="971" alt="Screenshot 2024-12-07 at 9 19 54 AM" src="https://github.com/user-attachments/assets/a25ba2ad-e68b-458d-81f3-0585e9972338">
 
 ## Project Overview
 
-The project aims to enhance user experience in search interfaces by providing smart query autocompletion. It utilizes two main models:
+The project aims to enhance the user experience in search interfaces by providing smart query autocompletion. It utilizes two main models:
 
 1. Fine-tuned GPT-2 model
 2. Masked Language Model (DistilRoBERTa-base)
@@ -18,7 +18,7 @@ These models are combined to overcome individual limitations and produce more ac
 
 ### Data Preparation
 
-- Used a Well Formedness Dataset containing query ratings and sentences
+- Used a [Well Formedness Dataset](https://huggingface.co/datasets/google-research-datasets/google_wellformed_query) containing query ratings and sentences
 - Performed data cleaning, exploration, and preprocessing
 - Applied filtering and class balancing techniques
 
