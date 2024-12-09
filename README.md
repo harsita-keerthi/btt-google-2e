@@ -7,7 +7,7 @@ This project focuses on developing an intelligent query autocompletion system us
 
 ## Project Overview
 
-The project aims to enhance the user experience in search interfaces by providing smart query autocompletion. It utilizes two main models:
+The project aims to enhance the user experience in search interfaces by providing smart query autocompletion. It utilizes two main models: 
 
 1. Fine-tuned GPT-2 model
 2. Masked Language Model (DistilRoBERTa-base)
